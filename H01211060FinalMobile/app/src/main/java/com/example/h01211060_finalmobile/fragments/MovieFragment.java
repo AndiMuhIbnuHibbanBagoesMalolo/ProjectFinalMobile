@@ -63,10 +63,9 @@ public class MovieFragment extends Fragment {
     }
 
     private void fetchMovies() {
-        // Menggunakan library Volley untuk mengambil data film dari API
         RequestQueue queue = Volley.newRequestQueue(requireContext());
-        String baseUrl = "https://api.themoviedb.org/3/movie/now_playing"; // Base URL API The Movie Database
-        String apiKey = "5fcb44f5991c765d4bfabcd479b852bf"; // API key yang diberikan
+        String baseUrl = "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
+        String apiKey = "36bd97dc9db63b7eb716590909ad7496";
         String url = baseUrl + "?api_key=" + apiKey;
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
