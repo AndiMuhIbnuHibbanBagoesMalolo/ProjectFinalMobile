@@ -64,7 +64,7 @@ public class MovieFragment extends Fragment {
 
     private void fetchMovies() {
         RequestQueue queue = Volley.newRequestQueue(requireContext());
-        String baseUrl = "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
+        String baseUrl = "https://www.themoviedb.org/movie/now-playing";
         String apiKey = "36bd97dc9db63b7eb716590909ad7496";
         String url = baseUrl + "?api_key=" + apiKey;
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
