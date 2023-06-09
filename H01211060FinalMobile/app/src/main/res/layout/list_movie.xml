@@ -9,7 +9,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#1A2C50"
         android:orientation="vertical">
 
         <ImageView
@@ -26,6 +25,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#FFBE00"
+            android:background="#1A2C50"
             android:padding="8dp" />
 
         <TextView
@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:textColor="#FFBE00"
+            android:background="#1A2C50"
             android:padding="8dp" />
 
     </LinearLayout>

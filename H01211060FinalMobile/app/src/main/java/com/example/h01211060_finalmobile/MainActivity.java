@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) { replaceFragment(new FavoriteFragment()); }
         });
     }
-
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
