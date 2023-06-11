@@ -20,7 +20,7 @@ import java.util.List;
 
 public class FavoriteFragment extends Fragment {
 
-    private RecyclerView favRV;
+    private RecyclerView favoriteRV;
     private FavoriteAdapter favoriteAdapter;
     private DatabaseHelper databaseHelper;
 
@@ -29,10 +29,10 @@ public class FavoriteFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_favorite, container, false);
 
-        favRV = view.findViewById(R.id.favRV);
-        favRV.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        favoriteRV = view.findViewById(R.id.favoriteRV);
+        favoriteRV.setLayoutManager(new GridLayoutManager(getContext(), 2));
         favoriteAdapter = new FavoriteAdapter(getContext());
-        favRV.setAdapter(favoriteAdapter);
+        favoriteRV.setAdapter(favoriteAdapter);
 
         databaseHelper = new DatabaseHelper(getContext());
 
