@@ -73,7 +73,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         } else {
             holder.mvYear.setText("");
         }
-        Glide.with(context).load("https://image.tmdb.org/t/p/w185" + movieResultList.get(position).getPosterPath())
+        Glide.with(context)
+                .load("https://image.tmdb.org/t/p/w185"
+                        + movieResultList.get(position)
+                        .getPosterPath())
                 .into(holder.mvPoster)
         ;
     }
