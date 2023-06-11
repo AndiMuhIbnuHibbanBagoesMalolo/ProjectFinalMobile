@@ -13,7 +13,7 @@ public class MovieResponse {
     private Integer page;
     @SerializedName("results")
     @Expose
-    private List<MovieResultss> results;
+    private List<MovieResults> results;
     @SerializedName("total_pages")
     @Expose
     private Integer totalPages;
@@ -37,11 +37,11 @@ public class MovieResponse {
         this.page = page;
     }
 
-    public List<MovieResultss> getResults() {
+    public List<MovieResults> getResults() {
         return results;
     }
 
-    public void setResults(List<MovieResultss> results) {
+    public void setResults(List<MovieResults> results) {
         this.results = results;
     }
 

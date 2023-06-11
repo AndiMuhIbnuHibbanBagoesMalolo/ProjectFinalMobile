@@ -1,4 +1,5 @@
 package com.example.h071211060_finalmobile.models.tvshows;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
