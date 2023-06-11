@@ -5,9 +5,29 @@
     android:layout_height="wrap_content"
     tools:context=".fragments.MovieFragment">
 
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A2C50"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:paddingStart="20sp"
+            android:layout_gravity="top"
+            android:textColor="#FFBE00"
+            android:textSize="20sp"
+            android:text="Movie"/>
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:id="@+id/MovieRV"
         tools:listitem="@layout/item_movie" />
 </FrameLayout>

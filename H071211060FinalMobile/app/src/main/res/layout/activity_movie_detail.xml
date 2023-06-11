@@ -36,6 +36,8 @@
         android:layout_width="235dp"
         android:layout_height="91dp"
         android:backgroundTint="#1A2C50"
+        android:layout_marginStart="10dp"
+        android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.909"
@@ -103,14 +105,14 @@
         android:id="@+id/mov_desc_cv"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:backgroundTint="#1A2C50"
         android:paddingHorizontal="5dp"
         android:paddingVertical="5dp"
-        app:layout_constraintVertical_bias="0.619" >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Mov_Poster"
+        app:layout_constraintVertical_bias="0.083">
 
         <TextView
             android:layout_width="wrap_content"
@@ -121,19 +123,20 @@
             android:textColor="#FFBE00"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" />
+
         <TextView
+            android:id="@+id/mov_desc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:text="Ini deskripsi film"
             android:textColor="#FFBE00"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/mov_desc"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.cardview.widget.CardView>
 
