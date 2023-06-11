@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">H071211060 - Final Mobile</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">TV shows</string>
+    <string name="favorites">Favorites</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
