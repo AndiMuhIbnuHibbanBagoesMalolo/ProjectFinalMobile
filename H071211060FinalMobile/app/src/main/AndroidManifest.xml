@@ -15,6 +15,9 @@
         android:theme="@style/Theme.H071211060FinalMobile"
         tools:targetApi="31">
         <activity
+            android:name=".TVShowsDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MovieDetailActivity"
             android:exported="false" />
         <activity
