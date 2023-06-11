@@ -1,4 +1,5 @@
 package com.example.h071211060_finalmobile.adapter;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -18,7 +19,7 @@ import com.example.h071211060_finalmobile.models.movie.MovieResults;
 
 import java.util.List;
 
-public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MvViewHolder> {
+public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
 
     private Context context;
     private List<MovieResults> movieResultList;
@@ -38,12 +39,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MvViewHolder
 
     @NonNull
     @Override
-    public MovieAdapter.MvViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MovieAdapter.MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         view = inflater.inflate(R.layout.item_movie, parent, false );
 
-        MovieAdapter.MvViewHolder viewHolder = new MovieAdapter.MvViewHolder(view);
+        MovieAdapter.MovieViewHolder viewHolder = new MovieAdapter.MovieViewHolder(view);
         viewHolder.MovieLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,7 +64,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MvViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MovieAdapter.MvViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MovieAdapter.MovieViewHolder holder, int position) {
         holder.mvTitle.setText(movieResultList.get(position).getTitle());
         String releaseDate = movieResultList.get(position).getReleaseDate();
         if (releaseDate != null && !releaseDate.isEmpty()) {
@@ -82,12 +83,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MvViewHolder
         return movieResultList.size();
     }
 
-    public class MvViewHolder extends RecyclerView.ViewHolder {
+    public class MovieViewHolder extends RecyclerView.ViewHolder {
 
         RelativeLayout MovieLayout;
         ImageView mvPoster;
         TextView  mvTitle, mvYear;
-        public MvViewHolder(@NonNull View itemView) {
+        public MovieViewHolder(@NonNull View itemView) {
             super(itemView);
 
             mvPoster = itemView.findViewById(R.id.movieImg);

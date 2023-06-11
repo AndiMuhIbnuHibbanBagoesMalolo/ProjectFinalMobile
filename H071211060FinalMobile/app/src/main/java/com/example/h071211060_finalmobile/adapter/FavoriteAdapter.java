@@ -15,18 +15,13 @@ import com.example.h071211060_finalmobile.R;
 import com.example.h071211060_finalmobile.MovieDetailActivity;
 import com.example.h071211060_finalmobile.TVShowsDetailsActivity;
 import com.example.h071211060_finalmobile.helper.DatabaseHelper;
-import com.example.h071211060_finalmobile.helper.DatabaseHelper;
-import com.example.h071211060_finalmobile.models.movie.MovieResults;
-import com.example.h071211060_finalmobile.models.tvshows.TVShowsResults;
-import com.example.h071211060_finalmobile.MovieDetailActivity;
-import com.example.h071211060_finalmobile.TVShowsDetailsActivity;
 import com.example.h071211060_finalmobile.models.movie.MovieResults;
 import com.example.h071211060_finalmobile.models.tvshows.TVShowsResults;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.FavViewHolder> {
+public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder> {
 
     private Context context;
     private List<MovieResults> favoriteMovies;
@@ -52,16 +47,16 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.FavVie
 
     @NonNull
     @Override
-    public FavViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public FavoriteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         view = inflater.inflate(R.layout.item_favorite, parent, false);
         databaseHelper = new DatabaseHelper(parent.getContext());
-        return new FavViewHolder(view);
+        return new FavoriteViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FavViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull FavoriteViewHolder holder, int position) {
         if (position < favoriteMovies.size()) {
             MovieResults movie = favoriteMovies.get(position);
             holder.bindMovie(movie);
@@ -97,12 +92,12 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.FavVie
         return favoriteMovies.size() + favoriteTVShows.size();
     }
 
-    public class FavViewHolder extends RecyclerView.ViewHolder {
+    public class FavoriteViewHolder extends RecyclerView.ViewHolder {
         ImageView favImg;
         TextView favTitle;
         TextView fav_year;
 
-        public FavViewHolder(@NonNull View itemView) {
+        public FavoriteViewHolder(@NonNull View itemView) {
             super(itemView);
 
             favImg = itemView.findViewById(R.id.favImg);
