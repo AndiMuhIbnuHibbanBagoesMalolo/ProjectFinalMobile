@@ -10,6 +10,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class TVShowsResults implements Parcelable {
+    public static final String EXTRA_TV_SHOW = "extra_tv_show";
     @SerializedName("backdrop_path")
     @Expose
     private String backdropPath;
